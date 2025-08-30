@@ -57,7 +57,7 @@ def _find_adb_directory() -> str:
 
 _ADB_PATH = flags.DEFINE_string(
     'adb_path',
-    _find_adb_directory(),
+    None,
     'Path to adb. Set if not installed through SDK.',
 )
 _EMULATOR_SETUP = flags.DEFINE_boolean(
@@ -85,10 +85,19 @@ _TASK = flags.DEFINE_string(
 
 def _main() -> None:
   """Runs a single task."""
+  adb_path = _ADB_PATH.value
+  if adb_path is None:
+    try:
+      adb_path = _find_adb_directory()
+    except EnvironmentError as e:
+      print(f"Error: {e}")
+      print("Please provide the --adb_path argument with the path to your adb executable.")
+      return
+  
   env = env_launcher.load_and_setup_env(
       console_port=_DEVICE_CONSOLE_PORT.value,
       emulator_setup=_EMULATOR_SETUP.value,
-      adb_path=_ADB_PATH.value,
+      adb_path=adb_path,
   )
   env.reset(go_home=True)
   task_registry = registry.TaskRegistry()

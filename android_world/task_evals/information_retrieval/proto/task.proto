@@ -4,7 +4,7 @@ syntax = "proto2";
 
 package android_world.task_evals.information_retrieval.proto;
 
-import "android_world/task_evals/information_retrieval/proto/state.proto";
+import "state.proto";
 
 // Wrapper around Task to create a collection of them.
 message Tasks {

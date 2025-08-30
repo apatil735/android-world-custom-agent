@@ -1,25 +1,37 @@
-# Compiled python modules.
-*.pyc
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.env
 
-# Byte-compiled
-_pycache__/
-.cache/
+# Android
+*.apk
+*.aab
+*.dex
+*.log
 
-# Poetry, setuptools, PyPI distribution artifacts.
-/*.egg-info
-.eggs/
-build/
-dist/
-poetry.lock
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# Tests
-.pytest_cache/
+# OS
+.DS_Store
+Thumbs.db
 
-# Type checking
-.pytype/
+# Personal files
+personal_config.py
+local_paths.txt
+emulator_screenshots/
+logs/
 
-# Other
-*.DS_Store
-
-# PyCharm
-.idea
+# Temporary files
+*.tmp
+*.temp
+*.bak
