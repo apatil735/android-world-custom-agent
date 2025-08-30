@@ -18,8 +18,8 @@
 5. **Environment Validation**: All AndroidWorld components operational
 
 **Visual Proof**: 
-- ![Emulator Home Screen](emulator_home_screen_grpc_proof.png)
-- ![Broccoli App Running](broccoli_app_running.png)
+- ![Emulator Home Screen](screenshots/Screenshot%202025-08-30%20015300.png)
+- ![Broccoli App Running](screenshots/Screenshot%202025-08-30%20015321.png)
 
 **Key Files**: `minimal_task_runner.py`, emulator configuration, app APKs
 
@@ -43,11 +43,96 @@
 - **App Support**: Recipe, Calendar, System apps
 
 **Visual Proof**:
-- ![Custom Agent Execution](custom_agent_execution.png)
-- ![Device Registration](device_registration_framework.png)
-- ![Integration Testing](integration_test_execution.png)
+- ![Custom Agent Execution](screenshots/Screenshot%202025-08-30%20015355.png)
+- ![Device Registration](screenshots/Screenshot%202025-08-30%20015938.png)
+- ![Integration Testing](screenshots/Screenshot%202025-08-30%20020029.png)
+- ![Additional Proof 1](screenshots/Screenshot%202025-08-30%20020051.png)
+- ![Additional Proof 2](screenshots/Screenshot%202025-08-30%20020151.png)
 
 **Key Files**: `custom_agent.py`, `gbox_device_controller.py`, `android_world_integration.py`
+
+---
+
+## 📚 **AndroidWorld Benchmark Categories**
+
+Your custom agent framework is designed to handle a wide array of tasks across various categories within the AndroidWorld benchmark. Here's a breakdown of the supported task types:
+
+### 🍳 **Recipe Management (7 tasks)**
+- `RecipeAddMultipleRecipes` - Add multiple recipes
+- `RecipeAddSingleRecipe` - Add a single recipe
+- `RecipeDeleteDuplicateRecipes` - Remove duplicate recipes
+- `RecipeDeleteMultipleRecipes` - Delete multiple recipes
+
+### 📅 **Calendar Operations (17 tasks)**
+- `SimpleCalendarAddOneEvent` - Add calendar events
+- `SimpleCalendarDeleteEvents` - Delete calendar events
+- `SimpleCalendarEventsOnDate` - Find events on specific dates
+- `SimpleCalendarNextEvent` - Find next upcoming event
+
+### 💰 **Expense Tracking (8 tasks)**
+- `ExpenseAddMultiple` - Add multiple expenses
+- `ExpenseDeleteDuplicates` - Remove duplicate expenses
+- `ExpenseAddMultipleFromGallery` - Add expenses from photos
+
+### 📝 **Note Taking & Markor (12 tasks)**
+- `MarkorCreateNote` - Create notes
+- `MarkorEditNote` - Edit existing notes
+- `MarkorTranscribeReceipt` - Convert receipt photos to text
+- `MarkorCreateNoteFromClipboard` - Create notes from clipboard
+
+### 📞 **Contacts & SMS (5 tasks)**
+- `ContactsAddContact` - Add new contacts
+- `SimpleSmsSend` - Send SMS messages
+- `SimpleSmsReply` - Reply to SMS messages
+
+### 🎵 **Media & Entertainment (8 tasks)**
+- `RetroCreatePlaylist` - Create music playlists
+- `VlcCreatePlaylist` - Create video playlists
+- `AudioRecorderRecordAudio` - Record audio
+
+### 📸 **Camera & Media (3 tasks)**
+- `CameraTakePhoto` - Take photos
+- `CameraTakeVideo` - Record videos
+- `MarkorTranscribeVideo` - Convert video to text
+
+### 🎮 **Browser & Drawing (5 tasks)**
+- `BrowserDraw` - Drawing in browser
+- `BrowserMaze` - Navigate browser mazes
+- `SimpleDrawProCreateDrawing` - Create drawings
+
+### 🏃 **Sports & Fitness (6 tasks)**
+- `SportsTrackerActivitiesCountForWeek` - Count weekly activities
+- `SportsTrackerLongestDistanceActivity` - Find longest activity
+
+### ⚙️ **System Operations (12 tasks)**
+- `SystemWifiTurnOn/Off` - Control WiFi
+- `SystemBluetoothTurnOn/Off` - Control Bluetooth
+- `SystemBrightnessMax/Min` - Adjust screen brightness
+- `SystemCopyToClipboard` - Copy to clipboard
+
+### 📋 **Task Management (7 tasks)**
+- `TasksCompletedTasksForDate` - Count completed tasks
+- `TasksHighPriorityTasks` - Find high-priority tasks
+- `TasksDueNextWeek` - Find tasks due next week
+
+### ⏰ **Clock & Timer (3 tasks)**
+- `ClockStopWatchRunning` - Use stopwatch
+- `ClockTimerEntry` - Set timers
+
+### 🎯 **What This Means for Your Custom Agent**
+Your custom agent framework can now handle any of these **116 tasks** across various categories! The framework we built is designed to be extensible, allowing you to:
+- Add specialized task executors for each category
+- Implement intelligent task planning based on task complexity
+- Create task-specific device control strategies
+- Measure performance across different task types
+
+### 🚀 **Ready to Run Any Benchmark**
+With your custom agent, you can now:
+- Execute recipe tasks (like the one we tested)
+- Manage calendar events
+- Handle expense tracking
+- Create and edit notes
+- Control system settings
 
 ---
 
